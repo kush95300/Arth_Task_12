@@ -15,9 +15,9 @@
           - name: "Configuring Server"
             copy: src={{ item.src }} dest={{ item.dest }}
             with_items:
-                   - { src: "webpage.php" , dest: "/var/www/html" }
+                   - { src: "webpage.php" , dest: "/var/www/html/index.php" }
 
-                   - {  src: "webpage.php" , dest: "/website" }
+                   - { src: "webpage.php" , dest: "/website/index.php" }
             notify: "reload webserver"
 
           - name: "Start Service"

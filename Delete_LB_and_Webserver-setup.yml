@@ -7,11 +7,15 @@
                             - "php"
                     state: absent
 
-          - name: "Creating Website Volume"
+          - name: "Deleting Website Volume"
             file:
                     state: "absent"
                     path: "/website"
 
+          - name: "Deleting Website Directory"
+            file:
+                    state: "absent"
+                    path: "/var/www/html/index.php"
 
 - hosts: Loadbalancer
   tasks:
